@@ -1,0 +1,41 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  box-sizing: border-box;
+}
+body{
+  background-color: #ddd;
+}
+button{
+  height: 50px;
+  width:90px;
+  background-color: #3d1b1b;
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  color:#DDD;
+  position: relative;
+  left:250px;
+}
+
+.slide{
+  height:100%;
+  width:200px;
+  position: absolute;
+  background-color: rgb(254, 255, 255);
+  transition: 0.5s ease;
+ transform:translateX(-180px)
+}
+h1{
+  color:#6f1479;
+  font-weight:800;
+}
+
+ul li legend,input {
+  color:#4a1550;
+  font-weight:500;
+  padding: 5px 0 ;
+  display:block;
+  transition: 0.2s ease-out;
+}
