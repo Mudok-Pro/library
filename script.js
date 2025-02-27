@@ -46,6 +46,9 @@ function getFormData(event) {
 const removeIt = (event) => {
   event.target.parentNode.remove();}
 
+  Book.prototype.toggleRead = function () {
+    this.read = !this.read ;
+  };
 function displayBook(title, author, pages, read) {
     const bookEntry = document.createElement("div");
     bookEntry.className = "book-entry";
@@ -55,7 +58,7 @@ function displayBook(title, author, pages, read) {
         <p>Author: ${author}</p>
         <p>Pages: ${pages}</p>
         <p>Read: ${read}</p>
-        
+        <button class="bookRead">Toggle Read Status</button>
     `;
     
     const libraryContainer = document.getElementById("library-container");
@@ -65,9 +68,16 @@ function displayBook(title, author, pages, read) {
 
     const removeButtons = document.querySelectorAll(".removeIt");
     removeButtons.forEach(button => button.addEventListener("click", removeIt ));
+
+    bookEntry.querySelector(".bookRead").addEventListener("click", function() {
+      read = !read; 
+      bookEntry.querySelector("p:nth-child(5)").innerText = `Read: ${read}`; 
+    });
+      
 }
 
 
+ 
 
 function initLibrary() {
     const libraryContainer = document.createElement("div");
