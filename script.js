@@ -43,19 +43,31 @@ function getFormData(event) {
     document.getElementById("read").value = "";
 }
 
+const removeIt = (event) => {
+  event.target.parentNode.remove();}
+
 function displayBook(title, author, pages, read) {
     const bookEntry = document.createElement("div");
     bookEntry.className = "book-entry";
     bookEntry.innerHTML = `
+        <button class="removeIt">X</button>
         <h3>${title}</h3>
         <p>Author: ${author}</p>
         <p>Pages: ${pages}</p>
         <p>Read: ${read}</p>
+        
     `;
     
     const libraryContainer = document.getElementById("library-container");
     libraryContainer.appendChild(bookEntry);
+
+    (bookEntry);
+
+    const removeButtons = document.querySelectorAll(".removeIt");
+    removeButtons.forEach(button => button.addEventListener("click", removeIt ));
 }
+
+
 
 function initLibrary() {
     const libraryContainer = document.createElement("div");
