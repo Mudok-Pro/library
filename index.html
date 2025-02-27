@@ -3,23 +3,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" ></script>
+  <script src="script.js" defer></script>
   <title>My Library</title>
 </head>
 <body>
   <button id="new-book" onclick="toggleSideBar()">New Book</button>
-  <form>  <label>
+  <form id="book-form">  <label>
     <div class="slide" id="slide">  
         <h1>+BOOKS</h1>
         <ul>
-          <li><legend>Title:</legend><input name="title" for="title"></li>
-          <li><legend>Author:</legend><input name="author" for="author"></li>
-          <li><legend>Pages:</legend><input name="pages" for="pages"></li>
-          <li><legend>Read it? :</legend><input name="read" for="read"></li>
+          <li><legend>Title:</legend><input id="title" name="title" for="title"></li>
+          <li><legend>Author:</legend><input id="author" name="author" for="author"></li>
+          <li><legend>Pages:</legend><input id="pages" name="pages" for="pages"></li>
+          <li><legend>Read it? :</legend><input type="checkbox" id="read" name="read"></li>
         
         </ul>
+        <button submit type="submit" id="submit" >Add to MY Library</button>
     </div>
+   
   </label>
+ 
 </form>
+<div id="library-container">
+</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 body{
   background-color: #ddd;
 }
-button{
+#new-book{
   height: 50px;
   width:90px;
   background-color: #3d1b1b;
@@ -38,4 +38,32 @@ ul li legend,input {
   padding: 5px 0 ;
   display:block;
   transition: 0.2s ease-out;
+}
+
+#submit{
+  margin-top: 15px;
+  margin-left: 20px;
+  color:#ddd;
+  background-color: #4a1550;
+  height:40px;
+  border-radius: 10px;
+  width:auto;
+}
+
+#library-container{
+  width:1000px;
+  background-color: white;
+  display:flex ; 
+  flex-wrap: wrap;
+  margin-left:300px;
+  margin-top:200px;
+
+  justify-content: center;
+
+}
+.book-entry{
+border: 1px solid black; 
+padding :2px;
+border-left: 2px solid rgb(167, 47, 47);
+
 }
