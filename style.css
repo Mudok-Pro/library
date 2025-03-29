@@ -6,12 +6,12 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #ddd;
+  background-color: #yellow;
 }
 #new-book{
   height: 50px;
   width:90px;
-  background-color: #3d1b1b;
+  background-color: #3dd;
   border-radius: 10px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   color:#DDD;
